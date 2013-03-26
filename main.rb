@@ -32,6 +32,7 @@ end
 def exponent (x,y)
 	puts "#{x} raised to the power of #{y} is #{x**y}"
 end
+	
 
 begin
 	#Introduction to calculator
@@ -41,7 +42,7 @@ begin
 	puts "To choose type of calculator type:"
 	puts "Simple (s)"
 	puts "Advanced (a)"
-	calc_type = gets.chomp.to_s
+	calc_type = gets.chomp.to_s.downcase
 
 
 if calc_type == "s"
@@ -51,7 +52,8 @@ if calc_type == "s"
 	#Choosing operation to be performed (* / + -)
 	puts "To choose type of operation to be performed type:"
 	puts "Addition (a).\nSubtraction (s).\nMultiplication (m).\nDivision (d)."
-	op_type = gets.chomp.to_s
+	op_type = gets.chomp.to_s.downcase
+	exit if op_type ="q"
 
 	#Inputting two values
 	puts "Enter first number: "
@@ -67,6 +69,7 @@ if calc_type == "s"
 		end
 	end
 
+elsif calc_type == "q" then exit 
 
 elsif calc_type == "a"
 
@@ -82,6 +85,8 @@ elsif calc_type == "a"
 		puts "Enter number: "
 		num1 = gets.chomp.to_i
 
+	elsif op_type == "q" then exit 
+	
 	elsif op_type == "e"
 		
 		#Inputting two values
@@ -95,7 +100,7 @@ elsif calc_type == "a"
 		puts "Please select w or e"
 	end
 
-else calc_type != "s" || "a"
+else calc_type != "s" || "a" || "q"
 	puts "Invalid input. Please type s for the Simple Calculator or a for the Advanced Calculator"
 # we have to loop it to be true to out message
 end
