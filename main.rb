@@ -9,14 +9,14 @@ begin
 	puts "Welcome to Calculator"
 
 	#Choosing calculator type (simple or advanced)
-	puts "Choose type of calculator: "
-	puts "Simple (type s)"
-	puts "Advanced (type a)"
+	puts "To choose type of calculator type:"
+	puts "Simple (s)"
+	puts "Advanced (a)"
 	calc_type = gets.chomp.to_s
 
 	#Choosing operation to be performed (* / + -)
-	puts "Choose type of operation to be performed: "
-	puts "Addition (type a).\nSubtraction (type s).\nMultiplication (type m).\nDivision (type d)."
+	puts "To choose type of operation to be performed type:"
+	puts "Addition (a).\nSubtraction (s).\nMultiplication (m).\nDivision (d)."
 	op_type = gets.chomp.to_s
 
 	#Inputting two values
@@ -44,7 +44,7 @@ begin
 
 	def division (x,y)
 		puts "Your operation is: #{x} / #{y}"
-		x / y
+		puts x / y
 	end
 
 	#Operations
